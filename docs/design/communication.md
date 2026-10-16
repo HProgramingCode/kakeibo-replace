@@ -12,7 +12,7 @@ flowchart LR
 ```
 
 - **本番**: 静的ファイルと Hono は **同一 Workers オリジン**。ブラウザは `/api/*` のみ API 呼び出し。**CORS 不要**。
-- **認証**: Cookie 名 `session`（HttpOnly）。詳細は [requirements-and-tech.md](../requirements-and-tech.md) §6.4。
+- **認証**: Cookie 名 `session`（HttpOnly）。詳細は [requirements-and-tech.md](../requirements-and-tech.md) §6.1.1。
 - 認可（member / owner）は **API 層**（現行 RLS の置き換え）。
 
 ---

@@ -107,7 +107,7 @@
 | ローカル | Wrangler | Workers / D1 と本番に近い。 |
 | 精算の複数更新 | D1 `batch` | 確定時の一括更新。 |
 | 配信 | Workers 同一オリジン | 静的アセット + Hono。ブラウザは `/api/*` のみ。CORS なし。 |
-| 認証 | HttpOnly Cookie セッション | 6.4 参照。JWT / localStorage は使わない。 |
+| 認証 | HttpOnly Cookie セッション | 6.1.1 参照。JWT / localStorage は使わない。 |
 
 ### 6.1.1 実行基盤（詳細）
 
