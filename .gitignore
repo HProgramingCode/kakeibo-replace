@@ -1,0 +1,14 @@
+# 依存・ビルド
+node_modules/
+dist/
+
+# Cloudflare / 秘密
+.dev.vars
+.wrangler/
+
+# 参照用コピー（手元のみ。README はコミット可）
+reference/kakeibo-share/
+
+# OS / エディタ
+.DS_Store
+*.log
