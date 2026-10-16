@@ -6,8 +6,9 @@ dist/
 .dev.vars
 .wrangler/
 
-# 参照用コピー（手元のみ。README はコミット可）
-reference/kakeibo-share/
+# 仕様・設計・参照（手元のみ。リポジトリには含めない）
+docs/
+reference/
 
 # OS / エディタ
 .DS_Store
