@@ -1,0 +1,6 @@
+# Wrangler ローカル用。コピー: cp .dev.vars.example .dev.vars
+# .dev.vars は gitignore
+
+SESSION_SECRET=dev-change-me-min-32-chars
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
