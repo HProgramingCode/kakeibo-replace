@@ -6,7 +6,7 @@ describe("computeExpenseShares", () => {
     const result = computeExpenseShares({
       amount: 3000,
       payerId: "payer-a",
-      participantIds: ["payer-a", "user-b"],
+      debtorIds: ["payer-a", "user-b"],
       splitMode: "exact",
       shareAmounts: { "payer-a": 1200, "user-b": 1800 },
     });

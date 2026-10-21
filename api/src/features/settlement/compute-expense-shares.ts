@@ -1,9 +1,9 @@
-import { computeParticipantShares } from "./compute-participant-shares.ts";
+import { computeDebtorShares } from "./compute-debtor-shares.ts";
 
 export type ExpenseShareInput = {
   amount: number;
   payerId: string;
-  participantIds: string[];
+  debtorIds: string[];
   splitMode: "exact" | "equal";
   shareAmounts?: Record<string, number>;
 };
@@ -11,12 +11,12 @@ export type ExpenseShareInput = {
 export function computeExpenseShares(
   input: ExpenseShareInput,
 ): Map<string, number> {
-  const { amount, payerId, participantIds, splitMode, shareAmounts } = input;
+  const { amount, payerId, debtorIds, splitMode, shareAmounts } = input;
 
   if (splitMode === "exact") {
     const shares = shareAmounts ?? {};
     const result = new Map<string, number>();
-    for (const id of participantIds) {
+    for (const id of debtorIds) {
       if (id in shares) {
         result.set(id, shares[id]!);
       }
@@ -24,5 +24,5 @@ export function computeExpenseShares(
     return result;
   }
 
-  return computeParticipantShares(amount, payerId, participantIds);
+  return computeDebtorShares(amount, payerId, debtorIds);
 }

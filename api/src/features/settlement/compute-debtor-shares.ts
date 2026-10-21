@@ -1,14 +1,14 @@
-export function computeParticipantShares(
+export function computeDebtorShares(
   amount: number,
   payerId: string,
-  participantIds: string[],
+  debtorIds: string[],
 ): Map<string, number> {
   const shares = new Map<string, number>();
 
-  const base = Math.floor(amount / participantIds.length);
-  const remainder = amount % participantIds.length;
+  const base = Math.floor(amount / debtorIds.length);
+  const remainder = amount % debtorIds.length;
 
-  for (const id of participantIds) {
+  for (const id of debtorIds) {
     shares.set(id, base);
   }
 
